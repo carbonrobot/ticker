@@ -1,0 +1,9 @@
+{
+	"name": "stockticker",
+	"version": "0.1.0",
+	"author": "Charlie Brown <carbonrobot@gmail.com>",
+	"description": "a simple price tracker for single stock items",
+	"dependencies": {
+		"express": "*"
+	}
+}

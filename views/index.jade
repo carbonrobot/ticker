@@ -1,0 +1,28 @@
+extends layout
+block main
+    div(class='col-sm-10 col-sm-offset-1 col-lg-8 col-lg-offset-2', ng-controller='updateController')
+        p.
+            In this example, we have a constant ongoing process that Node is monitoring. For our purposes,
+            we are just going to simulate stock prices. Now instead of the user initiating the request
+            for an update, we are going to broadcast updates to all clients from the server side using
+            Socket.IO. This keeps all connected client browsers in sync, irregardless of when the client
+            connects to the server (of course, not taking into account network latency).
+            
+         p Stock prices will decay once started, and can be increased by 'buying' more stock.
+            
+        .alert.alert-info Open multiple browser windows to get the full effect.
+        .well.clearfix
+            .col-sm-6
+                h3.no-bottom-margin
+                    | Status 
+                    span(class='label label-primary') {{status}}
+                .drop
+                    button(type='button', class='btn btn-success', ng-click='start()') Start Decay
+                    button(type='button', class='btn btn-danger' ng-click='stop()') Stop Decay
+
+            .col-sm-6
+                ul(class='list-group')
+                    li(class='list-group-item', ng-repeat='s in stocks')
+                        span(class='badge') {{s.price | currency}}
+                        {{s.name}}
+                        button(type='button', class='btn btn-xs indent', ng-click='buy(s)') Buy
