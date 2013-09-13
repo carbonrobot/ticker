@@ -1,9 +1,12 @@
 {
-	"name": "stockticker",
+	"name": "ticker",
 	"version": "0.1.0",
 	"author": "Charlie Brown <carbonrobot@gmail.com>",
-	"description": "a simple price tracker for single stock items",
+	"description": "Synchronized push notifications using Node, AngularJS, and Socket.IO",
 	"dependencies": {
-		"express": "*"
+		"express": "*",
+        "jade": "*"
+        "socket.io": "*",
+        "socket.io-client": "*"
 	}
 }
