@@ -5,7 +5,7 @@
   "description": "Synchronized push notifications using Node, AngularJS, and Socket.IO",
   "dependencies": {
     "express": "*",
-    "jade": "*"
+    "jade": "*",
     "socket.io": "*",
     "socket.io-client": "*"
   }
