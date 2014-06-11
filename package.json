@@ -1,0 +1,12 @@
+{
+  "name": "ticker",
+  "version": "0.1.0",
+  "author": "Charlie Brown <carbonrobot@gmail.com>",
+  "description": "Synchronized push notifications using Node, AngularJS, and Socket.IO",
+  "dependencies": {
+    "express": "*",
+    "jade": "*",
+    "socket.io": "*",
+    "socket.io-client": "*"
+  }
+}
